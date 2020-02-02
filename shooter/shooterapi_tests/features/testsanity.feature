@@ -8,9 +8,9 @@ Feature: Specflow/Nunit Test Framework
    Scenario: Basic Sanity Test Passing
    Given comparing Booleans
    When testing true equals true 
-   Then the test should pass
+   Then the test must pass
 
    Scenario: Basic Sanity Test Failure
    Given comparing Booleans
    When testing true equals false 
-   Then the test should fail
+   Then the test must fail

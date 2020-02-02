@@ -19,7 +19,7 @@ namespace shooter.shooterapi_tests.steps
             Console.WriteLine("When testing true equals true");
         }
 
-        [Then(@"the test should pass")]
+        [Then(@"the test must pass")]
         public void theTestShouldPass()
         {
             Assert.AreEqual(true,true);
@@ -31,7 +31,7 @@ namespace shooter.shooterapi_tests.steps
             Console.WriteLine("When testing true equals false");
         }
 
-        [Then(@"the test should fail")]
+        [Then(@"the test must fail")]
         public void theTestShouldFail()
         {
             try 
