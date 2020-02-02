@@ -1,4 +1,4 @@
-@startuml
+@startuml DB_Diagram
 
 ' hide the spot
 hide circle
