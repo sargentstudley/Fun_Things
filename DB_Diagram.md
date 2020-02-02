@@ -45,7 +45,7 @@ entity "Equipment" as e03 {
 }
 
 e01 ||..o{ e04
-e04 |o..o{ e05
+e04 o..|{ e05
 
 @enduml
 
