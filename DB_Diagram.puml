@@ -9,21 +9,36 @@ skinparam linetype ortho
 entity "Shooter" as e01 {
   *e1_id : number <<generated>>
   --
-  *name : text
+  *First_Name : text
+  *Last_Name : text
+  *Status : text
+  description : text
+  is_coach : number
+}
+
+entity "Shooter_Pins" as e04 {
+  *e4_id : number <<generated>>
+  --
+  *e1_id : neumber <<FK>>
+  *1e_id : neumber <<FK>>
+  description : text
+  
+}
+
+entity "Pins" as e05 {
+  *e5_id : number <<generated>>
+  --
+  *Pin_Name : text
   description : text
 }
 
-entity "Couch" as e02 {
-  *e2_id : number <<generated>>
-  --
-  *e1_id : number <<FK>>
-  other_details : text
-}
 
 entity "Equipment" as e03 {
   *e3_id : number <<generated>>
   --
-  e1_id : number <<FK>>
+  Equipment_Type : text
+  Equipment_Manufacturer : text
+
   other_details : text
 }
 
