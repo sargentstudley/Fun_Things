@@ -1,3 +1,5 @@
+~~~plantuml
+
 @startuml DB_Diagram
 
 ' hide the spot
@@ -42,7 +44,9 @@ entity "Equipment" as e03 {
   other_details : text
 }
 
-e01 ||..o{ e02
-e01 |o..o{ e03
+e01 ||..o{ e04
+e04 |o..o{ e05
 
 @enduml
+
+~~~
