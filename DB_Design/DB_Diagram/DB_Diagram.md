@@ -34,6 +34,7 @@ entity "Shooter_Pins" as e04 {
   *e1_id : neumber <<FK>>
   *1e_id : neumber <<FK>>
   *e6_id : neumber <<FK>>
+  *Location : text
   description : text
   
 }
@@ -42,7 +43,7 @@ entity "Pins" as e05 {
   *e5_id : number <<generated>>
   --
   *Pin_Name : text
-  *Location : text
+  
   *distance : text
   *Min_points : text
   e8_id : neumber <<FK>>
@@ -72,6 +73,7 @@ entity "Equipment" as e03 {
   *e3_id : number <<generated>>
   --
   Equipment_Type : text
+  Equipment_Name : text
   Equipment_Manufacturer : text
 
   other_details : text
@@ -84,9 +86,6 @@ entity "Equipment_list" as e06 {
 
   *e1_id : neumber <<FK>>
   *e3_id : neumber <<FK>>
-  Equipment_Type : text
-  Equipment_Manufacturer : text
-
   other_details : text
 }
 
