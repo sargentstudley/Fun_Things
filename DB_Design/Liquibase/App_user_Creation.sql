@@ -1,0 +1,12 @@
+USE [master]
+GO
+CREATE LOGIN [Shooter_app] WITH PASSWORD=N'OMGFun!', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+USE [ShooterDB]
+GO
+CREATE USER [Shooter_app] FOR LOGIN [Shooter_app]
+GO
+USE [ShooterDB]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [Shooter_app]
+GO
