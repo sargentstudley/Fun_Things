@@ -44,8 +44,26 @@ entity "Equipment" as e03 {
   other_details : text
 }
 
+
+entity "Equipment_list" as e06 {
+  *e6_id : number <<generated>>
+  --
+
+  *e1_id : neumber <<FK>>
+  *e3_id : neumber <<FK>>
+  Equipment_Type : text
+  Equipment_Manufacturer : text
+
+  other_details : text
+}
+
+
 e01 ||..o{ e04
-e04 o..|{ e05
+e04 }o..o| e05
+e06 ||..o{ e03
+e01 ||..|| e06
+
+
 
 @enduml
 
