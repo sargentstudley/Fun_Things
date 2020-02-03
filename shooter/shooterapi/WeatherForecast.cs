@@ -1,6 +1,6 @@
 using System;
 
-namespace shooterapi
+namespace shooter.shooterapi
 {
     public class WeatherForecast
     {
