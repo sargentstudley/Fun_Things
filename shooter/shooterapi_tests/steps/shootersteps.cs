@@ -25,9 +25,9 @@ namespace shooter.shooterapi_tests.steps
                 shooter = value;
             }
         }
-        public ShooterTestSharedContext newShooter(string name) 
+        public ShooterTestSharedContext newShooter(int id, string name) 
         {
-            return new ShooterTestSharedContext{Shooter = new Shooter(name)};
+            return new ShooterTestSharedContext{Shooter = new Shooter(id, name)};
         }
     }
 
@@ -46,10 +46,10 @@ namespace shooter.shooterapi_tests.steps
             
         }
 
-        [When(@"working with a shooter named '(.*)'")]
-        public void whenGettingAShooter(string name)
+        [When(@"working with a shooter named '(.*)' and ID of (.*)")]
+        public void whenGettingAShooter(string name, int id)
         {
-            testContext = testContext.newShooter(name);
+            testContext = testContext.newShooter(id,name);
 
         }
 
@@ -58,6 +58,13 @@ namespace shooter.shooterapi_tests.steps
         {
             var shooterUnderTest = testContext.Shooter;
             Assert.AreEqual(expectedName, shooterUnderTest.Name);
+        }
+
+        [Then(@"the shooter should have the ID (.*)")]
+        public void shootShouldHaveIDOf(int id)
+        {
+            var shooterunderTest = testContext.Shooter;
+            Assert.AreEqual(id,shooterunderTest.ID);
         }
     }
 }
