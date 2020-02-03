@@ -1,12 +1,10 @@
-using TechTalk.SpecFlow;
-using System;
-using NUnit.Framework;
-
-using shooter.shooterapi;
-using shooter.shooterapi.Controllers;
-
 namespace shooter.shooterapi_tests.steps 
 {
+    using TechTalk.SpecFlow;
+    using NUnit.Framework;
+    using shooter.shooterapi;
+    using shooter.shooterapi.Controllers;
+
     public class ShooterTestSharedContext
     { 
         private Shooter shooter;

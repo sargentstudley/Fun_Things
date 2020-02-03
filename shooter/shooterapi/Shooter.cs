@@ -1,11 +1,9 @@
-using System;
-
 namespace shooter.shooterapi 
 {
     public class Shooter 
     {
         private readonly string name;
-        
+
         private readonly int id;
 
         public Shooter(int id, string name)
