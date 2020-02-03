@@ -3,12 +3,14 @@ using System;
 using NUnit.Framework;
 
 using shooter.shooterapi;
+using shooter.shooterapi.Controllers;
 
 namespace shooter.shooterapi_tests.steps 
 {
     public class ShooterTestSharedContext
     { 
         private Shooter shooter;
+        private ShooterController shooterController;
         public ShooterTestSharedContext()
         {
             
@@ -23,6 +25,18 @@ namespace shooter.shooterapi_tests.steps
             set
             {
                 shooter = value;
+            }
+        }
+
+        public ShooterController ShooterControllerUnderTest
+        {
+            get
+            {
+                return shooterController;
+            }
+            set
+            {
+                shooterController = value;
             }
         }
         public ShooterTestSharedContext newShooter(int id, string name) 
@@ -40,8 +54,8 @@ namespace shooter.shooterapi_tests.steps
             testContext = sharedTestContext;
         }
 
-        [Given(@"an api consumer")]
-        public void givenAnApiConsumer() 
+        [Given(@"a shooter object user")]
+        public void givenAShooterObjectUser() 
         {
             
         }
@@ -65,6 +79,25 @@ namespace shooter.shooterapi_tests.steps
         {
             var shooterunderTest = testContext.Shooter;
             Assert.AreEqual(id,shooterunderTest.ID);
+        }
+
+        [Given(@"a shooter api user")]
+        public void givenAnApiConsumer() 
+        {
+            var shooterControllerUnderTest = new ShooterController();
+            testContext.ShooterControllerUnderTest = shooterControllerUnderTest;
+        }
+        [When(@"calling the get shooter method with an ID of (.*)")]
+        public void whenCallingGetShooterWithId(int id)
+        {
+            var controllerUnderTest = testContext.ShooterControllerUnderTest;
+            testContext.Shooter = controllerUnderTest.Get(id);
+            
+        }
+        [Then(@"the controller should return a shooter object with ID of (.*)")]
+        public void controllerShouldReturnShooterWithID(int id)
+        {
+            Assert.AreEqual(id, testContext.Shooter.ID);
         }
     }
 }
