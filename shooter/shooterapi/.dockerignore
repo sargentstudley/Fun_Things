@@ -1,0 +1,12 @@
+.git
+.cache
+.scripts
+
+**/*.md
+
+**/debug
+**/Debug
+**/release
+**/Release
+**/bin
+**/Bin
