@@ -30,4 +30,4 @@ IF NOT DEFINED JAVA_OPTS set JAVA_OPTS=
 set JAVA_PATH=""
 if NOT "%JAVA_HOME%" == "" set JAVA_PATH=%JAVA_HOME%\bin\
 
-"%JAVA_PATH%\java" -cp "%CP%" %JAVA_OPTS% liquibase.integration.commandline.Main %*
+"C:\Program Files\Java\jdk-13.0.2\bin\java.exe" -cp "%CP%" %JAVA_OPTS% liquibase.integration.commandline.Main %*
