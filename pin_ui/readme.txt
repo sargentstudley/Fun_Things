@@ -13,7 +13,9 @@ Installation
   vetur
 
 -Set up VSCode preferences
-  settings are secretly a giant built in json file and when you modify them, you create your own personal preferences json file.  
+  settings are secretly a giant built in json file and when you modify them, you create your own personal preferences json file.
+  The change to vetur validation just shuts off linting so that we can use eslint to do that, avoiding conflict between the two.
+  The tweaks to eslint will automatically validate and autofix errors in Vue specific code, general html, and javascript.
   Edit your settings.json to have the following:
     "vetur.validation.template": false,
     "eslint.validate": [
