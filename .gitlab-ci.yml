@@ -1,0 +1,9 @@
+stages:
+  - build
+  - test
+
+shooterapi:
+  trigger:
+   include:
+    - local: shooterapi/shooterapi_ci.yml
+    strategy: depend
