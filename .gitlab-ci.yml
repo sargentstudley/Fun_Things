@@ -7,7 +7,7 @@ stages:
 build shooterapi:
   stage: build
   script:
-    - "cd shooterapi"
+    - "cd shooter/shooterapi"
     - "dotnet restore"
     - "dotnet build"
     - "cd ../shooterapi_tests"
@@ -17,5 +17,5 @@ build shooterapi:
 test shootapi:
   stage: test
   script:
-    - "cd sshooterapi_tests"
+    - "cd shooter/shooterapi_tests"
     - "dotnet test"
