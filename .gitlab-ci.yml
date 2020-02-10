@@ -1,0 +1,21 @@
+image: microsoft/dotnet:latest
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - "cd shooter/shooterapi"
+    - "dotnet restore"
+    - "dotnet build"
+    - "cd ../shooterapi_tests"
+    - "dotnet restore"
+    - "dotnet build"
+
+test:
+  stage: test
+  script:
+    - "cd shooter/shooterapi_tests"
+    - "dotnet test"
