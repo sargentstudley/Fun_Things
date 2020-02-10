@@ -1,9 +1,21 @@
+image: mcr.microsoft.com/dotnet/core/sdk:3.1
+
 stages:
   - build
   - test
 
-shooterapi:
-  trigger:
-    include:
-      - local: shooter/shooterapi_ci.yml
-    strategy: depend
+build shooterapi:
+  stage: build
+  script:
+    - "cd shooterapi"
+    - "dotnet restore"
+    - "dotnet build"
+    - "cd ../shooterapi_tests"
+    - "dotnet restore"
+    - "dotnet build"
+
+test shootapi:
+  stage: test
+  script:
+    - "cd sshooterapi_tests"
+    - "dotnet test"
