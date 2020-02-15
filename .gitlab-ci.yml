@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+
+# Shooter API pipeline items:
+
+test shootapi:
+  stage: test
+  image: mcr.microsoft.com/dotnet/core/sdk:3.1
+  script:
+    - "cd shooter/shooterapi_tests"
+    - "dotnet test"
+
+# pin_ui pipeline items:
+
+build pin_ui:
+  stage: build
+  image: node:12.15
+  script:
+    - "cd pin_ui/pinmentor"
+    - "npm install"
+    - "npm install -g @vue/cli"
+    - "npm run build"
