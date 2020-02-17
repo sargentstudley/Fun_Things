@@ -7,7 +7,6 @@ stages:
 test shootapi:
   stage: test
   image: mcr.microsoft.com/dotnet/core/sdk:3.1
-  needs: []
   script:
     - "cd shooter/shooterapi_tests"
     - "dotnet test"
