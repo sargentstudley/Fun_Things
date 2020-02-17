@@ -28,6 +28,7 @@ test pin_ui:
   image: node:13.8.0
   needs: ["build pin_ui"]
   script:
-    - "npm install -g @vue/cli"
     - "cd pin_ui/pinmentor"
+    - "npm install"
+    - "npm install -g @vue/cli"
     - "npm run test:unit"
