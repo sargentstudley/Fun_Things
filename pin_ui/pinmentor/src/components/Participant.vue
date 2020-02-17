@@ -1,7 +1,8 @@
 <template>
     <div class="participant">
-        First Name: {{ firstName }}
-        Last Name: {{ lastName }}
+        <h3>Participant:</h3> 
+        <p> {{ firstName }} {{ lastName }}</p>
+         
     </div>
 </template>
 <script>
