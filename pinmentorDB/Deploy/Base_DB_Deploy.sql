@@ -1,5 +1,4 @@
-USE [master]
-GO
+
 USE [master]
 GO
 CREATE LOGIN [PinMentor_app] WITH PASSWORD=N'OMGFun!', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
@@ -20,11 +19,11 @@ begin
 EXEC [PinMentorDB_test].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
-USE [PinMentorDB]
+USE [PinMentorDB_test]
 GO
 CREATE USER [PinMentor_app] FOR LOGIN [PinMentor_app]
 GO
-USE [PinMentorDB]
+USE [PinMentorDB_test]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [PinMentor_app]
 GO
@@ -91,11 +90,6 @@ GO
 ALTER DATABASE [PinMentorDB_test] SET QUERY_STORE = OFF
 GO
 USE [PinMentorDB_test]
-GO
-/****** Object:  User [PinMentor_app]    Script Date: 2/2/2020 7:27:36 PM ******/
-CREATE USER [PinMentor_app] FOR LOGIN [PinMentor_app] WITH DEFAULT_SCHEMA=[dbo]
-GO
-ALTER ROLE [db_owner] ADD MEMBER [PinMentor_app]
 GO
 /****** Object:  Table [dbo].[Class_types]    Script Date: 2/2/2020 7:27:36 PM ******/
 SET ANSI_NULLS ON
