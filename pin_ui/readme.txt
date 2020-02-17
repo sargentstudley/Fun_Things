@@ -8,9 +8,9 @@ Installation
   verify your installation by typing running "vue ui" on the command line
 
 -Add development extensions
-  eslint
-  prettier
-  vetur
+  eslint (dbaeumer.vscode-eslint)
+  prettier (esbenp.prettier-vscode)
+  vetur (octref.vetur)
 
 -Set up VSCode preferences
   settings are secretly a giant built in json file and when you modify them, you create your own personal preferences json file.
