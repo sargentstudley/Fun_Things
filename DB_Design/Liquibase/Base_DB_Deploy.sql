@@ -1,89 +1,101 @@
 USE [master]
 GO
-/****** Object:  Database [ShooterDB_test]    Script Date: 2/2/2020 7:27:36 PM ******/
-CREATE DATABASE [ShooterDB_test]
+USE [master]
+GO
+CREATE LOGIN [PinMentor_app] WITH PASSWORD=N'OMGFun!', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+/****** Object:  Database [PinMentorDB_test]    Script Date: 2/2/2020 7:27:36 PM ******/
+CREATE DATABASE [PinMentorDB_test]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'ShooterDB_test', FILENAME = N'/var/opt/mssql/data/ShooterDB_test.mdl' , SIZE = 65536KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'PinMentorDB_test', FILENAME = N'/var/opt/mssql/data/PinMentorDB_test.mdl' , SIZE = 65536KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'ShooterDB_test_log', FILENAME = N'/var/opt/mssql/data/ShooterDB_test.ldf' , SIZE = 65536KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'PinMentorDB_test_log', FILENAME = N'/var/opt/mssql/data/PinMentorDB_test.ldf' , SIZE = 65536KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
-ALTER DATABASE [ShooterDB_test] SET COMPATIBILITY_LEVEL = 150
+ALTER DATABASE [PinMentorDB_test] SET COMPATIBILITY_LEVEL = 150
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
-EXEC [ShooterDB_test].[dbo].[sp_fulltext_database] @action = 'enable'
+EXEC [PinMentorDB_test].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
-ALTER DATABASE [ShooterDB_test] SET ANSI_NULL_DEFAULT OFF 
+USE [PinMentorDB]
 GO
-ALTER DATABASE [ShooterDB_test] SET ANSI_NULLS OFF 
+CREATE USER [PinMentor_app] FOR LOGIN [PinMentor_app]
 GO
-ALTER DATABASE [ShooterDB_test] SET ANSI_PADDING OFF 
+USE [PinMentorDB]
 GO
-ALTER DATABASE [ShooterDB_test] SET ANSI_WARNINGS OFF 
+ALTER ROLE [db_owner] ADD MEMBER [PinMentor_app]
 GO
-ALTER DATABASE [ShooterDB_test] SET ARITHABORT OFF 
+ALTER DATABASE [PinMentorDB_test] SET ANSI_NULL_DEFAULT OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET AUTO_CLOSE OFF 
+ALTER DATABASE [PinMentorDB_test] SET ANSI_NULLS OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET AUTO_SHRINK OFF 
+ALTER DATABASE [PinMentorDB_test] SET ANSI_PADDING OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET AUTO_UPDATE_STATISTICS ON 
+ALTER DATABASE [PinMentorDB_test] SET ANSI_WARNINGS OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET CURSOR_CLOSE_ON_COMMIT OFF 
+ALTER DATABASE [PinMentorDB_test] SET ARITHABORT OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET CURSOR_DEFAULT  GLOBAL 
+ALTER DATABASE [PinMentorDB_test] SET AUTO_CLOSE OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET CONCAT_NULL_YIELDS_NULL OFF 
+ALTER DATABASE [PinMentorDB_test] SET AUTO_SHRINK OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET NUMERIC_ROUNDABORT OFF 
+ALTER DATABASE [PinMentorDB_test] SET AUTO_UPDATE_STATISTICS ON 
 GO
-ALTER DATABASE [ShooterDB_test] SET QUOTED_IDENTIFIER OFF 
+ALTER DATABASE [PinMentorDB_test] SET CURSOR_CLOSE_ON_COMMIT OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET RECURSIVE_TRIGGERS OFF 
+ALTER DATABASE [PinMentorDB_test] SET CURSOR_DEFAULT  GLOBAL 
 GO
-ALTER DATABASE [ShooterDB_test] SET  DISABLE_BROKER 
+ALTER DATABASE [PinMentorDB_test] SET CONCAT_NULL_YIELDS_NULL OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+ALTER DATABASE [PinMentorDB_test] SET NUMERIC_ROUNDABORT OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET DATE_CORRELATION_OPTIMIZATION OFF 
+ALTER DATABASE [PinMentorDB_test] SET QUOTED_IDENTIFIER OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET TRUSTWORTHY OFF 
+ALTER DATABASE [PinMentorDB_test] SET RECURSIVE_TRIGGERS OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+ALTER DATABASE [PinMentorDB_test] SET  DISABLE_BROKER 
 GO
-ALTER DATABASE [ShooterDB_test] SET PARAMETERIZATION SIMPLE 
+ALTER DATABASE [PinMentorDB_test] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET READ_COMMITTED_SNAPSHOT OFF 
+ALTER DATABASE [PinMentorDB_test] SET DATE_CORRELATION_OPTIMIZATION OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET HONOR_BROKER_PRIORITY OFF 
+ALTER DATABASE [PinMentorDB_test] SET TRUSTWORTHY OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET RECOVERY FULL 
+ALTER DATABASE [PinMentorDB_test] SET ALLOW_SNAPSHOT_ISOLATION OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET  MULTI_USER 
+ALTER DATABASE [PinMentorDB_test] SET PARAMETERIZATION SIMPLE 
 GO
-ALTER DATABASE [ShooterDB_test] SET PAGE_VERIFY CHECKSUM  
+ALTER DATABASE [PinMentorDB_test] SET READ_COMMITTED_SNAPSHOT OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET DB_CHAINING OFF 
+ALTER DATABASE [PinMentorDB_test] SET HONOR_BROKER_PRIORITY OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+ALTER DATABASE [PinMentorDB_test] SET RECOVERY FULL 
 GO
-ALTER DATABASE [ShooterDB_test] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+ALTER DATABASE [PinMentorDB_test] SET  MULTI_USER 
 GO
-ALTER DATABASE [ShooterDB_test] SET DELAYED_DURABILITY = DISABLED 
+ALTER DATABASE [PinMentorDB_test] SET PAGE_VERIFY CHECKSUM  
 GO
-EXEC sys.sp_db_vardecimal_storage_format N'ShooterDB_test', N'ON'
+ALTER DATABASE [PinMentorDB_test] SET DB_CHAINING OFF 
 GO
-ALTER DATABASE [ShooterDB_test] SET QUERY_STORE = OFF
+ALTER DATABASE [PinMentorDB_test] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
 GO
-USE [ShooterDB_test]
+ALTER DATABASE [PinMentorDB_test] SET TARGET_RECOVERY_TIME = 60 SECONDS 
 GO
-/****** Object:  User [Shooter_app]    Script Date: 2/2/2020 7:27:36 PM ******/
-CREATE USER [Shooter_app] FOR LOGIN [Shooter_app] WITH DEFAULT_SCHEMA=[dbo]
+ALTER DATABASE [PinMentorDB_test] SET DELAYED_DURABILITY = DISABLED 
 GO
-ALTER ROLE [db_owner] ADD MEMBER [Shooter_app]
+EXEC sys.sp_db_vardecimal_storage_format N'PinMentorDB_test', N'ON'
+GO
+ALTER DATABASE [PinMentorDB_test] SET QUERY_STORE = OFF
+GO
+USE [PinMentorDB_test]
+GO
+/****** Object:  User [PinMentor_app]    Script Date: 2/2/2020 7:27:36 PM ******/
+CREATE USER [PinMentor_app] FOR LOGIN [PinMentor_app] WITH DEFAULT_SCHEMA=[dbo]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [PinMentor_app]
 GO
 /****** Object:  Table [dbo].[Class_types]    Script Date: 2/2/2020 7:27:36 PM ******/
 SET ANSI_NULLS ON
@@ -161,7 +173,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Equipment_list](
 	[Equipment_list_id] [int] NOT NULL,
-	[shooter_id] [int] NOT NULL,
+	[PinMentor_id] [int] NOT NULL,
 	[Equipment_id] [int] NOT NULL,
  CONSTRAINT [PK_EQUIPMENT_LIST] PRIMARY KEY CLUSTERED 
 (
@@ -194,7 +206,7 @@ GO
 CREATE TABLE [dbo].[Shoot_history](
 	[shoot_id] [int] NOT NULL,
 	[shoot_details] [nchar](10) NULL,
-	[shooter_id] [int] NOT NULL,
+	[PinMentor_id] [int] NOT NULL,
 	[shoot_date] [date] NOT NULL,
  CONSTRAINT [PK_SHOOT_HISTORY] PRIMARY KEY CLUSTERED 
 (
@@ -202,38 +214,38 @@ CREATE TABLE [dbo].[Shoot_history](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Shooter]    Script Date: 2/2/2020 7:27:36 PM ******/
+/****** Object:  Table [dbo].[PinMentor]    Script Date: 2/2/2020 7:27:36 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[Shooter](
-	[shooter_id] [int] NOT NULL,
+CREATE TABLE [dbo].[PinMentor](
+	[PinMentor_id] [int] NOT NULL,
 	[first_name] [varchar](50) NOT NULL,
 	[last_name] [varchar](50) NOT NULL,
 	[active] [bit] NULL,
 	[iscoach] [bit] NULL,
 	[Class_id] [int] NULL,
 	[discription] [varchar](max) NOT NULL,
- CONSTRAINT [PK_SHOOTER] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_PinMentor] PRIMARY KEY CLUSTERED 
 (
-	[shooter_id] ASC
+	[PinMentor_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Shooter_pins]    Script Date: 2/2/2020 7:27:36 PM ******/
+/****** Object:  Table [dbo].[PinMentor_pins]    Script Date: 2/2/2020 7:27:36 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[Shooter_pins](
-	[shooterpin_id] [int] NOT NULL,
-	[shooter_id] [int] NOT NULL,
+CREATE TABLE [dbo].[PinMentor_pins](
+	[PinMentorpin_id] [int] NOT NULL,
+	[PinMentor_id] [int] NOT NULL,
 	[location] [varchar](50) NOT NULL,
 	[pin_id] [int] NULL,
- CONSTRAINT [PK_SHOOTER_PINS] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_PinMentor_PINS] PRIMARY KEY CLUSTERED 
 (
-	[shooterpin_id] ASC
+	[PinMentorpin_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -254,46 +266,46 @@ CREATE TABLE [dbo].[target_types](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Shooter] ADD  CONSTRAINT [DF_Shooter_active]  DEFAULT ((1)) FOR [active]
+ALTER TABLE [dbo].[PinMentor] ADD  CONSTRAINT [DF_PinMentor_active]  DEFAULT ((1)) FOR [active]
 GO
-ALTER TABLE [dbo].[Shooter] ADD  CONSTRAINT [DF_Shooter_iscoach]  DEFAULT ((0)) FOR [iscoach]
+ALTER TABLE [dbo].[PinMentor] ADD  CONSTRAINT [DF_PinMentor_iscoach]  DEFAULT ((0)) FOR [iscoach]
 GO
 ALTER TABLE [dbo].[Equipment_list]  WITH CHECK ADD  CONSTRAINT [FK_Equipment_list_Equipment] FOREIGN KEY([Equipment_id])
 REFERENCES [dbo].[Equipment] ([Equipment_id])
 GO
 ALTER TABLE [dbo].[Equipment_list] CHECK CONSTRAINT [FK_Equipment_list_Equipment]
 GO
-ALTER TABLE [dbo].[Equipment_list]  WITH CHECK ADD  CONSTRAINT [FK_Equipment_list_Shooter] FOREIGN KEY([shooter_id])
-REFERENCES [dbo].[Shooter] ([shooter_id])
+ALTER TABLE [dbo].[Equipment_list]  WITH CHECK ADD  CONSTRAINT [FK_Equipment_list_PinMentor] FOREIGN KEY([PinMentor_id])
+REFERENCES [dbo].[PinMentor] ([PinMentor_id])
 GO
-ALTER TABLE [dbo].[Equipment_list] CHECK CONSTRAINT [FK_Equipment_list_Shooter]
+ALTER TABLE [dbo].[Equipment_list] CHECK CONSTRAINT [FK_Equipment_list_PinMentor]
 GO
 ALTER TABLE [dbo].[pins]  WITH CHECK ADD  CONSTRAINT [FK_pins_target_types] FOREIGN KEY([target_types_id])
 REFERENCES [dbo].[target_types] ([target_id])
 GO
 ALTER TABLE [dbo].[pins] CHECK CONSTRAINT [FK_pins_target_types]
 GO
-ALTER TABLE [dbo].[Shoot_history]  WITH CHECK ADD  CONSTRAINT [FK_Shoot_history_Shooter] FOREIGN KEY([shooter_id])
-REFERENCES [dbo].[Shooter] ([shooter_id])
+ALTER TABLE [dbo].[Shoot_history]  WITH CHECK ADD  CONSTRAINT [FK_Shoot_history_PinMentor] FOREIGN KEY([PinMentor_id])
+REFERENCES [dbo].[PinMentor] ([PinMentor_id])
 GO
-ALTER TABLE [dbo].[Shoot_history] CHECK CONSTRAINT [FK_Shoot_history_Shooter]
+ALTER TABLE [dbo].[Shoot_history] CHECK CONSTRAINT [FK_Shoot_history_PinMentor]
 GO
-ALTER TABLE [dbo].[Shooter]  WITH CHECK ADD  CONSTRAINT [FK_Shooter_Class_types] FOREIGN KEY([Class_id])
+ALTER TABLE [dbo].[PinMentor]  WITH CHECK ADD  CONSTRAINT [FK_PinMentor_Class_types] FOREIGN KEY([Class_id])
 REFERENCES [dbo].[Class_types] ([Class_id])
 GO
-ALTER TABLE [dbo].[Shooter] CHECK CONSTRAINT [FK_Shooter_Class_types]
+ALTER TABLE [dbo].[PinMentor] CHECK CONSTRAINT [FK_PinMentor_Class_types]
 GO
-ALTER TABLE [dbo].[Shooter_pins]  WITH CHECK ADD  CONSTRAINT [FK_Shooter_pins_pins] FOREIGN KEY([pin_id])
+ALTER TABLE [dbo].[PinMentor_pins]  WITH CHECK ADD  CONSTRAINT [FK_PinMentor_pins_pins] FOREIGN KEY([pin_id])
 REFERENCES [dbo].[pins] ([pin_id])
 GO
-ALTER TABLE [dbo].[Shooter_pins] CHECK CONSTRAINT [FK_Shooter_pins_pins]
+ALTER TABLE [dbo].[PinMentor_pins] CHECK CONSTRAINT [FK_PinMentor_pins_pins]
 GO
-ALTER TABLE [dbo].[Shooter_pins]  WITH CHECK ADD  CONSTRAINT [FK_Shooter_pins_Shooter] FOREIGN KEY([shooter_id])
-REFERENCES [dbo].[Shooter] ([shooter_id])
+ALTER TABLE [dbo].[PinMentor_pins]  WITH CHECK ADD  CONSTRAINT [FK_PinMentor_pins_PinMentor] FOREIGN KEY([PinMentor_id])
+REFERENCES [dbo].[PinMentor] ([PinMentor_id])
 GO
-ALTER TABLE [dbo].[Shooter_pins] CHECK CONSTRAINT [FK_Shooter_pins_Shooter]
+ALTER TABLE [dbo].[PinMentor_pins] CHECK CONSTRAINT [FK_PinMentor_pins_PinMentor]
 GO
 USE [master]
 GO
-ALTER DATABASE [ShooterDB_test] SET  READ_WRITE 
+ALTER DATABASE [PinMentorDB_test] SET  READ_WRITE 
 GO
