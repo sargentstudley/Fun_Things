@@ -15,9 +15,20 @@ test pin_api:
 
 build pin_ui:
   stage: build
-  image: node:12.15
+  image: node:13.8.0
+  artifacts:
   script:
     - "cd pin_ui/pinmentor"
     - "npm install"
     - "npm install -g @vue/cli"
     - "npm run build"
+
+test pin_ui:
+  stage: test
+  image: node:13.8.0
+  needs: ["build pin_ui"]
+  script:
+    - "cd pin_ui/pinmentor"
+    - "npm install"
+    - "npm install -g @vue/cli"
+    - "npm run test:unit"
