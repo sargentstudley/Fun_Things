@@ -1,1 +1,1 @@
-docker run -p 5000:5000 -p 5001:5001 -p 80:80 localhost/shooter:latest
+docker run -p 9090:9090 --rm localhost/shooter:latest
