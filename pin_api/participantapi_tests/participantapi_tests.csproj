@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\shooterapi\shooterapi.csproj" />
+    <ProjectReference Include="..\participantapi\participantapi.csproj" />
   </ItemGroup>
 
 </Project>
