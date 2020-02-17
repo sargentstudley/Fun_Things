@@ -1,12 +1,12 @@
-namespace shooter.shooterapi 
+namespace participant.participantapi 
 {
-    public class Shooter 
+    public class Participant 
     {
         private readonly string name;
 
         private readonly int id;
 
-        public Shooter(int id, string name)
+        public Participant(int id, string name)
         {
             this.id = id;
             this.name = name;

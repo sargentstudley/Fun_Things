@@ -2,7 +2,7 @@ using TechTalk.SpecFlow;
 using System;
 using NUnit.Framework;
 
-namespace shooter.shooterapi_tests.steps 
+namespace participant.participantapi_tests.steps 
 {
     [Binding]
     public class SanityTestSteps 

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace shooterapi_tests.Features
+namespace participantapi_tests.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,23 +20,23 @@ namespace shooterapi_tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Shooter API")]
-    public partial class ShooterAPIFeature
+    [NUnit.Framework.DescriptionAttribute("Participant API")]
+    public partial class ParticipantAPIFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "shooter.feature"
+#line 1 "participant.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Shooter API", "   Shooter API provides a data representation for shooters - people who have shot" +
-                    " in archery. ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Participant API", "   Participant API provides a data representation for Participants - people who h" +
+                    "ave shot in archery. ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,11 +75,11 @@ namespace shooterapi_tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Using a shooter object to represent a shooter")]
-        public virtual void UsingAShooterObjectToRepresentAShooter()
+        [NUnit.Framework.DescriptionAttribute("Using a Participant object to represent a Participant")]
+        public virtual void UsingAParticipantObjectToRepresentAParticipant()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Using a shooter object to represent a shooter", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Using a Participant object to represent a Participant", null, ((string[])(null)));
 #line 5
    this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -101,27 +101,27 @@ namespace shooterapi_tests.Features
             {
                 this.ScenarioStart();
 #line 6
-   testRunner.Given("a shooter object user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+   testRunner.Given("a Participant object user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
-   testRunner.When("working with a shooter named \'Kathleen\' and ID of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+   testRunner.When("working with a Participant named \'Kathleen\' and ID of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
-   testRunner.Then("the shooter should have the name \'Kathleen\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.Then("the Participant should have the name \'Kathleen\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 9
-   testRunner.And("the shooter should have the ID 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("the Participant should have the ID 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Getting a shooter from API")]
-        public virtual void GettingAShooterFromAPI()
+        [NUnit.Framework.DescriptionAttribute("Getting a Participant from API")]
+        public virtual void GettingAParticipantFromAPI()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting a shooter from API", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting a Participant from API", null, ((string[])(null)));
 #line 11
    this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -143,13 +143,13 @@ namespace shooterapi_tests.Features
             {
                 this.ScenarioStart();
 #line 12
-   testRunner.Given("a shooter api user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+   testRunner.Given("a Participant api user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
-   testRunner.When("calling the get shooter method with an ID of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+   testRunner.When("calling the get Participant method with an ID of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
-   testRunner.Then("the controller should return a shooter object with ID of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.Then("the controller should return a Participant object with ID of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -1,6 +1,4 @@
-
-
-namespace shooter.shooterapi
+namespace participant.participantapi
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;

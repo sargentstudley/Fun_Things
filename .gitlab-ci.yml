@@ -4,11 +4,11 @@ stages:
 
 # Shooter API pipeline items:
 
-test shootapi:
+test pin_api:
   stage: test
   image: mcr.microsoft.com/dotnet/core/sdk:3.1
   script:
-    - "cd shooter/shooterapi_tests"
+    - "cd pin_api/participantapi_tests"
     - "dotnet test"
 
 # pin_ui pipeline items:
