@@ -7,6 +7,7 @@ stages:
 test shootapi:
   stage: test
   image: mcr.microsoft.com/dotnet/core/sdk:3.1
+  needs: []
   script:
     - "cd shooter/shooterapi_tests"
     - "dotnet test"
@@ -15,9 +16,17 @@ test shootapi:
 
 build pin_ui:
   stage: build
-  image: node:12.15
+  image: node:13.8.0
   script:
     - "cd pin_ui/pinmentor"
     - "npm install"
     - "npm install -g @vue/cli"
     - "npm run build"
+
+test pin_ui:
+  stage: test
+  image: node:13.8.0
+  needs: ["build pin_ui"]
+  script:
+    - "cd pin_ui/pinmentor"
+    - "npm run test:unit"
