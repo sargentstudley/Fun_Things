@@ -21,11 +21,14 @@ namespace participant.participantapi.DataStore
         }
         public void Add(Participant item)
         {
+            participantList.RemoveAll(p => p.ID == item.ID);
             participantList.Add(item);
         }
 
         public void Add(IEnumerable<Participant> items)
         {
+            HashSet<int> participantIds = new HashSet<int>(items.Select(p => p.ID));
+            participantList.RemoveAll(p => participantIds.Contains(p.ID));
             participantList.AddRange(items);
         }
 
@@ -41,7 +44,8 @@ namespace participant.participantapi.DataStore
 
         public void Delete(Expression<Func<Participant, bool>> expression)
         {
-            throw new NotImplementedException();
+            var setToRemove = participantList.AsQueryable().Where(expression).ToHashSet();
+            participantList.RemoveAll(p => setToRemove.Contains(p));
         }
 
         public void Delete(Participant item)
@@ -51,7 +55,7 @@ namespace participant.participantapi.DataStore
 
         public void DeleteAll()
         {
-            throw new NotImplementedException();
+            participantList.Clear();
         }
 
         public void Dispose()
