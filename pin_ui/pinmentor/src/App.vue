@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      Welcome, Robin Hood, you have hit the Matrix loading program for
+      Pinmentor.<br /><br />
+      <router-link :to="{ name: 'coach' }">Coach Landing Page</router-link> |
+      <router-link :to="{ name: 'event' }">Event edit page</router-link> |
+      <router-link :to="{ name: 'participant' }">Participant page</router-link>
+      |
+      <router-link :to="{ name: 'schedule' }">Schedule edit page</router-link> |
+      <router-link :to="{ name: 'roster' }">Roster Edit Page</router-link>
     </div>
     <router-view />
   </div>
