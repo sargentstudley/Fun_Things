@@ -29,6 +29,8 @@ namespace participant.participantapi_tests.steps
             }
         }
 
+        public Participant[] Participants { get; set; }
+
         public InMemoryParticipantStore TestDataStore
         {
             get
@@ -109,6 +111,7 @@ namespace participant.participantapi_tests.steps
             var testDataStore = new InMemoryParticipantStore();
             var participantControllerUnderTest = new ParticipantController(testDataStore);
             var expectedParticipant = new Participant(id, firstName, lastName);
+            testDataStore.Add(expectedParticipant);
             testContext.ParticipantControllerUnderTest = participantControllerUnderTest;
             testContext.TestDataStore = testDataStore;
         }
@@ -123,12 +126,19 @@ namespace participant.participantapi_tests.steps
             testContext.TestDataStore = testDataStore;
         }
 
+        [When(@"calling the get Participant method")]
+        public void whenCallingGetAllParticipants()
+        {
+            //Adding the participant into the data store. 
+            var controllerUnderTest = testContext.ParticipantControllerUnderTest;
+            testContext.Participants = controllerUnderTest.Get();
+        }
+
         [When(@"calling the get Participant method with an ID of (.*)")]
         public void whenCallingGetShooterWithId(int id)
         {
             //Adding the participant into the data store. 
             var expectedParticipant = new Participant(id, "John", "Doe");
-            testContext.TestDataStore.Add(expectedParticipant);
 
             var controllerUnderTest = testContext.ParticipantControllerUnderTest;
             testContext.Participant = controllerUnderTest.Get(id);
@@ -150,6 +160,7 @@ namespace participant.participantapi_tests.steps
             };
             testContext.ParticipantControllerUnderTest.Put(participantsToSubmit);
         }
+
         [Then(@"participant '(.*)' '(.*)' is persisted to the data store")]
         public void dataStoreHasParticipant(string firstName, string lastName)
         {
@@ -158,5 +169,18 @@ namespace participant.participantapi_tests.steps
                  && p.LastName.Equals(lastName)),
                 Is.Not.Null);
         }
+        [Then(@"the controller should return a list of Participants")]
+
+        public void verifyReturnType()
+        {
+            Assert.That(testContext.Participants, Is.TypeOf(typeof(Participant[])));
+        }
+
+        [Then(@"the first participant's ID is (.*)")]
+        public void verifyFirstParticipantId(int id)
+        {
+            Assert.That(testContext.Participants[0].ID.Value, Is.EqualTo(id));
+        }
+
     }
 }

@@ -129,6 +129,23 @@ namespace participant.participantapi_tests.unit
             var resultParticipant = store.Single(a => a.FirstName == participantAdded.FirstName);
 
             Assert.That(resultParticipant.FirstName, Is.EqualTo(participantAdded.FirstName));
+            Assert.That(resultParticipant.ID, Is.Not.Null);
+        }
+
+        [Test]
+        public void InMemoryParticipantStore_canUpsertManyAndThenSelect()
+        {
+            var participant1 = new Participant(null, "Bob", "Smith");
+            var participant2 = new Participant(null, "John", "Doe");
+            var participantArray = new Participant[] {participant1, participant2};
+
+            IRepository<Participant> store = new InMemoryParticipantStore();
+            store.Add(participantArray);
+
+            var resultParticipant = store.Single(a => a.FirstName == participant1.FirstName);
+
+            Assert.That(resultParticipant.FirstName, Is.EqualTo(participant1.FirstName));
+            Assert.That(resultParticipant.ID, Is.Not.Null);
         }
     }
 

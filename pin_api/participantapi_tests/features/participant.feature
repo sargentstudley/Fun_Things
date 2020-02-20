@@ -19,3 +19,9 @@ Feature: Participant API
    When  participant 'John' 'Doe' is sent to the api using the put method
    Then  participant 'John' 'Doe' is persisted to the data store
 
+   Scenario: Getting all Participants from API 
+   Given a participant with ID of 1, first name 'John', and last name 'Doe' exists already
+   When calling the get Participant method
+   Then the controller should return a list of Participants
+   And the first participant's ID is 1
+

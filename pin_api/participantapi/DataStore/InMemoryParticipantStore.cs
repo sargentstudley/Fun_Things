@@ -44,17 +44,17 @@ namespace participant.participantapi.DataStore
 
         public void Add(IEnumerable<Participant> items)
         {
-            HashSet<int> participantIds = new HashSet<int>(items.Select(p => p.ID.GetValueOrDefault()));
-
             //Loop through items to be added, assign IDs to those that don't have it. 
             var participantsToAdd = items.Select(p => p.ID.HasValue ? p 
-                                        : new Participant(++index,p.FirstName,p.LastName)).ToHashSet();
+                                        : new Participant(++index,p.FirstName,p.LastName)).ToList();
+
+            var incomingParticipantIds = participantsToAdd.Select(p => p.ID.Value);
 
             //Loop through all existing items, remove existing duplicates from local store found in hash set. 
-            participantList.RemoveAll(p => participantIds.Contains(p.ID.Value));
+            participantList.RemoveAll(p => incomingParticipantIds.Contains(p.ID.Value));
             
             //Add new items. 
-            participantList.AddRange(items);
+            participantList.AddRange(participantsToAdd);
         }
 
         public IQueryable<Participant> All()

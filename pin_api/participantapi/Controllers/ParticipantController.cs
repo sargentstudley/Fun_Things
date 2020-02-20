@@ -2,6 +2,8 @@ namespace participant.participantapi.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
     using participantapi.DataStore;
+    using System.Linq;
+    using System.Collections.Generic;
 
     [ApiController]
     [Route("[controller]")]
@@ -12,6 +14,13 @@ namespace participant.participantapi.Controllers
         {
             _datastore = datastore;
         }
+
+        [HttpGet]
+        public Participant[] Get()
+        {
+            return _datastore.All().ToArray();
+        }
+
         
         [HttpGet("{id}")]
         public Participant Get(int id)
