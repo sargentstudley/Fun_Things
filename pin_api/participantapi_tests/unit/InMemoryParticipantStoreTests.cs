@@ -21,8 +21,8 @@ namespace participant.participantapi_tests.unit
         {
             //Setup
             List<Participant> originalList = new List<Participant>();
-            originalList.Add(new Participant(1, "Bob"));
-            originalList.Add(new Participant(2, "Joe"));
+            originalList.Add(new Participant(1, "Bob","Smith"));
+            originalList.Add(new Participant(2, "Joe", "Snape"));
 
             //Run test
             IRepository<Participant> store = new InMemoryParticipantStore(originalList);
@@ -36,7 +36,7 @@ namespace participant.participantapi_tests.unit
         {
             //Setup
             List<Participant> originalList = new List<Participant>();
-            var expectedParticipant = new Participant(1, "Bob");
+            var expectedParticipant = new Participant(1, "Bob", "Smith");
             originalList.Add(expectedParticipant);
            
             IRepository<Participant> store = new InMemoryParticipantStore(originalList);
@@ -50,7 +50,7 @@ namespace participant.participantapi_tests.unit
         [Test]
         public void InMemoryParticipantStore_canAdd()
         {
-            var participantAdded = new Participant(1, "Bob");
+            var participantAdded = new Participant(1, "Bob","Smith");
             IRepository<Participant> store = new InMemoryParticipantStore();
             store.Add(participantAdded);
             var resultParticipant = store.Single(a => a.ID == participantAdded.ID);
@@ -61,11 +61,11 @@ namespace participant.participantapi_tests.unit
         [Test]
         public void InMemoryParticipantStore_canUpsert()
         {
-            var participantAdded = new Participant(1, "Bob");
+            var participantAdded = new Participant(1, "Bob", "Smith");
             IRepository<Participant> store = new InMemoryParticipantStore();
             store.Add(participantAdded);
 
-            var updatedParticipant = new Participant(1,"Joe");
+            var updatedParticipant = new Participant(1,"Joe", "Smith");
             store.Add(updatedParticipant);
 
             var resultParticipant = store.Single(a => a.ID == participantAdded.ID);
@@ -76,15 +76,15 @@ namespace participant.participantapi_tests.unit
         [Test]
         public void InMemoryParticipantStore_canUpsertMany()
         {
-            var original1 = new Participant(1, "Bob");
-            var original2 = new Participant(2, "Joe");
+            var original1 = new Participant(1, "Bob", "Smith");
+            var original2 = new Participant(2, "Joe", "Smith");
 
             var originalList = new List<Participant>() {original1, original2};
 
             IRepository<Participant> store = new InMemoryParticipantStore(originalList);
 
-            var changed1 = new Participant(1, "Sarah");
-            var changed2 = new Participant(2, "Jane");
+            var changed1 = new Participant(1, "Sarah","Jane");
+            var changed2 = new Participant(2, "Jane", "Smith");
 
             var changedList = new List<Participant>(){changed1, changed2};
 
@@ -101,8 +101,8 @@ namespace participant.participantapi_tests.unit
         {
             //Setup
             List<Participant> originalList = new List<Participant>();
-            var participantToDelete = new Participant(1, "Bob");
-            var secondParticipant = new Participant(2, "Joe");
+            var participantToDelete = new Participant(1, "Bob", "Smith");
+            var secondParticipant = new Participant(2, "Joe", "Doe");
             originalList.Add(participantToDelete);
             originalList.Add(secondParticipant);
            

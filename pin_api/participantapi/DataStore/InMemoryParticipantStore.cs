@@ -8,27 +8,52 @@ namespace participant.participantapi.DataStore
     public class InMemoryParticipantStore : IRepository<Participant>
     {
         private List<Participant> participantList;
+        private int index;
         public InMemoryParticipantStore(IEnumerable<Participant> participants = null)
         {
             if (participants == null) 
             {
                 participantList = new List<Participant>();
+                index = 0;
             }
             else
             {
                 participantList = participants.ToList();
+                index = participantList.Select(p => p.ID.Value).Max();
             }
+
+            
         }
         public void Add(Participant item)
         {
-            participantList.RemoveAll(p => p.ID == item.ID);
+            if (item.ID.HasValue)
+            {
+                participantList.RemoveAll(p => p.ID == item.ID);
+            }
+            else
+            {
+                item = new Participant(++index, 
+                                        item.FirstName,
+                                        item.LastName
+                                    );
+                                    
+            }
+            
             participantList.Add(item);
         }
 
         public void Add(IEnumerable<Participant> items)
         {
-            HashSet<int> participantIds = new HashSet<int>(items.Select(p => p.ID));
-            participantList.RemoveAll(p => participantIds.Contains(p.ID));
+            HashSet<int> participantIds = new HashSet<int>(items.Select(p => p.ID.GetValueOrDefault()));
+
+            //Loop through items to be added, assign IDs to those that don't have it. 
+            var participantsToAdd = items.Select(p => p.ID.HasValue ? p 
+                                        : new Participant(++index,p.FirstName,p.LastName)).ToHashSet();
+
+            //Loop through all existing items, remove existing duplicates from local store found in hash set. 
+            participantList.RemoveAll(p => participantIds.Contains(p.ID.Value));
+            
+            //Add new items. 
             participantList.AddRange(items);
         }
 
