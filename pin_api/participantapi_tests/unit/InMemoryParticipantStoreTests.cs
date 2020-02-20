@@ -118,6 +118,18 @@ namespace participant.participantapi_tests.unit
             Assert.That(remainingParticipant, Is.Not.Null);
             
         }
+
+        [Test]
+        public void InMemoryParticipantStore_canUpsertAndThenSelect()
+        {
+            var participantAdded = new Participant(null, "Bob", "Smith");
+            IRepository<Participant> store = new InMemoryParticipantStore();
+            store.Add(participantAdded);
+
+            var resultParticipant = store.Single(a => a.FirstName == participantAdded.FirstName);
+
+            Assert.That(resultParticipant.FirstName, Is.EqualTo(participantAdded.FirstName));
+        }
     }
 
 

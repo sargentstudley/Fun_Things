@@ -90,7 +90,9 @@ namespace participant.participantapi.DataStore
 
         public Participant Single(Expression<Func<Participant, bool>> expression)
         {
-            return participantList.AsQueryable().Single(expression);
+            
+            Func<Participant,bool> func = expression.Compile();
+            return participantList.Single(func);
         }
     }
 }
