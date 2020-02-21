@@ -10,7 +10,7 @@ namespace participant.participantapi.DataStore
         T Single(Expression<Func<T, bool>> expression);
         System.Linq.IQueryable<T> All();
         System.Linq.IQueryable<T> All(int page, int pageSize);
-        void Add(T item);
-        void Add(IEnumerable<T> items);
+        T Add(T item);
+        IEnumerable<T> Add(IEnumerable<T> items);
     }
 }

@@ -24,7 +24,7 @@ namespace participant.participantapi.DataStore
 
             
         }
-        public void Add(Participant item)
+        public Participant Add(Participant item)
         {
             if (item.ID.HasValue)
             {
@@ -40,9 +40,11 @@ namespace participant.participantapi.DataStore
             }
             
             participantList.Add(item);
+
+            return item;
         }
 
-        public void Add(IEnumerable<Participant> items)
+        public IEnumerable<Participant> Add(IEnumerable<Participant> items)
         {
             //Loop through items to be added, assign IDs to those that don't have it. 
             var participantsToAdd = items.Select(p => p.ID.HasValue ? p 
@@ -55,6 +57,8 @@ namespace participant.participantapi.DataStore
             
             //Add new items. 
             participantList.AddRange(participantsToAdd);
+
+            return participantsToAdd;
         }
 
         public IQueryable<Participant> All()

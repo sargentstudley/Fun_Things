@@ -147,6 +147,115 @@ namespace participant.participantapi_tests.unit
             Assert.That(resultParticipant.FirstName, Is.EqualTo(participant1.FirstName));
             Assert.That(resultParticipant.ID, Is.Not.Null);
         }
+
+        [Test]
+        public void InMemoryParticipantStore_canSelectAll_NotImplemented()
+        {
+            //We do not need paging right now, so we just write a test to show it isn't implemented and thats expected. 
+            IRepository<Participant> store = new InMemoryParticipantStore();
+
+            TestDelegate testDelegate = () => store.All(1,1);
+
+            Assert.That(testDelegate, Throws.TypeOf<NotImplementedException>());
+        }
+
+        [Test]
+        public void InMemoryParticipantStore_canDelete()
+        {
+            //Arrange
+            var participant1 = new Participant(null, "Bob", "Smith");
+            var participant2 = new Participant(null, "John", "Doe");
+            var participantArray = new Participant[] {participant1, participant2};
+
+            IRepository<Participant> store = new InMemoryParticipantStore();
+            participantArray = store.Add(participantArray).ToArray();
+            participant1 = participantArray[0];
+            participant2 = participantArray[1];
+
+            //Act
+            store.Delete(p => p.ID == participant1.ID);
+
+            //Assert
+            var remainingParticipants = store.All();
+            Assert.That(remainingParticipants.Count(),Is.EqualTo(1));
+
+            var participantLeft = remainingParticipants.ToArray()[0];
+
+            // Looking for no side effects
+            Assert.That(participantLeft.ID, Is.EqualTo(participant2.ID));
+            Assert.That(participantLeft.FirstName, Is.EqualTo(participant2.FirstName));
+            Assert.That(participantLeft.LastName, Is.EqualTo(participant2.LastName));
+        }
+
+        [Test]
+        public void InMemoryParticipantStore_canDeleteItem()
+        {
+            //Arrange
+            var participant1 = new Participant(null, "Bob", "Smith");
+            var participant2 = new Participant(null, "John", "Doe");
+            var participantArray = new Participant[] {participant1, participant2};
+
+            IRepository<Participant> store = new InMemoryParticipantStore();
+            participantArray = store.Add(participantArray).ToArray();
+            participant1 = participantArray[0];
+            participant2 = participantArray[1];
+
+            //Act
+            store.Delete(participant1);
+
+            //Assert
+            var remainingParticipants = store.All();
+            Assert.That(remainingParticipants.Count(),Is.EqualTo(1));
+
+            var participantLeft = remainingParticipants.ToArray()[0];
+
+            // Looking for no side effects
+            Assert.That(participantLeft.ID, Is.EqualTo(participant2.ID));
+            Assert.That(participantLeft.FirstName, Is.EqualTo(participant2.FirstName));
+            Assert.That(participantLeft.LastName, Is.EqualTo(participant2.LastName));
+        }
+
+        [Test]
+        public void InMemoryParticipantStore_canDeleteAll()
+        {
+            //Arrange
+            var participant1 = new Participant(null, "Bob", "Smith");
+            var participant2 = new Participant(null, "John", "Doe");
+            
+            var participantArray = new Participant[] {participant1, participant2};
+
+            IRepository<Participant> store = new InMemoryParticipantStore();
+
+            participantArray = store.Add(participantArray).ToArray();
+            
+            //Act
+            store.DeleteAll();
+
+            //Assert
+            var remainingParticipants = store.All();
+            Assert.That(remainingParticipants.Count(),Is.EqualTo(0));
+        }
+
+        [Test]
+        public void InMemoryParticipantStore_canDispose()
+        {
+            //Arrange
+            var participant1 = new Participant(null, "Bob", "Smith");
+            var participant2 = new Participant(null, "John", "Doe");
+            
+            var participantArray = new Participant[] {participant1, participant2};
+
+            IRepository<Participant> store = new InMemoryParticipantStore();
+
+            participantArray = store.Add(participantArray).ToArray();
+            
+            //Act
+            store.Dispose();
+
+            //Assert
+            var remainingParticipants = store.All();
+            Assert.That(remainingParticipants.Count(),Is.EqualTo(0));
+        }
     }
 
 
