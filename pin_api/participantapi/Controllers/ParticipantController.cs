@@ -29,9 +29,9 @@ namespace participant.participantapi.Controllers
         }
 
         [HttpPut]
-        public void Put(Participant[] participants)
+        public IEnumerable<Participant> Put(Participant[] participants)
         {
-            _datastore.Add(participants);
+            return _datastore.Add(participants);
         }
     }
 }
