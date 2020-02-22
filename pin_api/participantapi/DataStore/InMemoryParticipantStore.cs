@@ -96,7 +96,15 @@ namespace participant.participantapi.DataStore
         {
             
             Func<Participant,bool> func = expression.Compile();
-            return participantList.Single(func);
+
+            try
+            {
+                return participantList.Single(func);
+            }
+            catch(InvalidOperationException)
+            {
+                return null;
+            }
         }
     }
 }

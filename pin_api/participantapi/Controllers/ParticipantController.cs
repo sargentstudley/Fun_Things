@@ -16,22 +16,24 @@ namespace participant.participantapi.Controllers
         }
 
         [HttpGet]
-        public Participant[] Get()
+        public ActionResult<Participant[]> Get()
         {
             return _datastore.All().ToArray();
         }
 
         
         [HttpGet("{id}")]
-        public Participant Get(int id)
+        public ActionResult<Participant> Get(int id)
         {
-            return _datastore.Single(p => p.ID == id);
+            var result = _datastore.Single(p => p.ID == id);
+            if (result != null) return result;
+            return NotFound();
         }
 
         [HttpPut]
-        public IEnumerable<Participant> Put(Participant[] participants)
+        public ActionResult<IEnumerable<Participant>> Put(Participant[] participants)
         {
-            return _datastore.Add(participants);
+            return _datastore.Add(participants).ToArray();
         }
     }
 }

@@ -1,5 +1,6 @@
 namespace participant.participantapi_tests.steps
 {
+    using Microsoft.AspNetCore.Mvc;
     using TechTalk.SpecFlow;
     using NUnit.Framework;
     using participant.participantapi;
@@ -58,6 +59,8 @@ namespace participant.participantapi_tests.steps
         {
             return new ParticipantTestSharedContext { Participant = new Participant(id, firstName, secondName) };
         }
+
+        public ActionResult Result {get;set;}
     }
 
     [Binding]
@@ -131,23 +134,29 @@ namespace participant.participantapi_tests.steps
         {
             //Adding the participant into the data store. 
             var controllerUnderTest = testContext.ParticipantControllerUnderTest;
-            testContext.Participants = controllerUnderTest.Get();
+            testContext.Participants = controllerUnderTest.Get().Value;
         }
 
         [When(@"calling the get Participant method with an ID of (.*)")]
         public void whenCallingGetShooterWithId(int id)
         {
             //Adding the participant into the data store. 
-            var expectedParticipant = new Participant(id, "John", "Doe");
+            //var expectedParticipant = new Participant(id, "John", "Doe");
 
             var controllerUnderTest = testContext.ParticipantControllerUnderTest;
-            testContext.Participant = controllerUnderTest.Get(id);
-
+            
+            testContext.Participant = controllerUnderTest.Get(id).Value;
         }
         [Then(@"the controller should return a Participant object with ID of (.*)")]
         public void controllerShouldReturnParticipantWithID(int id)
         {
             Assert.AreEqual(id, testContext.Participant.ID);
+        }
+
+        [Then(@"the controller get should return not found.")]
+        public void controllerGetReturnsNotFound()
+        {
+            Assert.That(testContext.Participant, Is.Null);
         }
 
         [When(@"participant '(.*)' '(.*)' is sent to the api using the put method")]
@@ -182,5 +191,15 @@ namespace participant.participantapi_tests.steps
             Assert.That(testContext.Participants[0].ID.Value, Is.EqualTo(id));
         }
 
+        [Given(@"a participant with ID of (.*), first name '(.*)', and last name '(.*)' doesn't exist")]
+        public void setupParticipantThatDoesNotExists(int id, string firstName, string lastName)
+        {
+            var testDataStore = new InMemoryParticipantStore();
+            var participantControllerUnderTest = new ParticipantController(testDataStore);
+            testContext.ParticipantControllerUnderTest = participantControllerUnderTest;
+            testContext.TestDataStore = testDataStore;
+        }
+
+        
     }
 }

@@ -14,6 +14,11 @@ Feature: Participant API
    When calling the get Participant method with an ID of 1
    Then the controller should return a Participant object with ID of 1
 
+   Scenario: Getting a Participant from API that doesn't exist
+   Given a participant with ID of 12345, first name 'John', and last name 'Doe' doesn't exist
+   When calling the get Participant method with an ID of 12345
+   Then the controller get should return not found.
+
    Scenario: Inserting a Participant from API
    Given 'John' 'Doe' is not persisted
    When  participant 'John' 'Doe' is sent to the api using the put method

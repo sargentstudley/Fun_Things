@@ -161,11 +161,11 @@ namespace participantapi_tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Inserting a Participant from API")]
-        public virtual void InsertingAParticipantFromAPI()
+        [NUnit.Framework.DescriptionAttribute("Getting a Participant from API that doesn\'t exist")]
+        public virtual void GettingAParticipantFromAPIThatDoesntExist()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Inserting a Participant from API", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting a Participant from API that doesn\'t exist", null, ((string[])(null)));
 #line 17
    this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -187,24 +187,25 @@ namespace participantapi_tests.Features
             {
                 this.ScenarioStart();
 #line 18
-   testRunner.Given("\'John\' \'Doe\' is not persisted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+   testRunner.Given("a participant with ID of 12345, first name \'John\', and last name \'Doe\' doesn\'t ex" +
+                        "ist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
-   testRunner.When("participant \'John\' \'Doe\' is sent to the api using the put method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+   testRunner.When("calling the get Participant method with an ID of 12345", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
-   testRunner.Then("participant \'John\' \'Doe\' is persisted to the data store", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.Then("the controller get should return not found.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Getting all Participants from API")]
-        public virtual void GettingAllParticipantsFromAPI()
+        [NUnit.Framework.DescriptionAttribute("Inserting a Participant from API")]
+        public virtual void InsertingAParticipantFromAPI()
         {
             string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting all Participants from API", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Inserting a Participant from API", null, ((string[])(null)));
 #line 22
    this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -226,16 +227,55 @@ namespace participantapi_tests.Features
             {
                 this.ScenarioStart();
 #line 23
+   testRunner.Given("\'John\' \'Doe\' is not persisted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 24
+   testRunner.When("participant \'John\' \'Doe\' is sent to the api using the put method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+   testRunner.Then("participant \'John\' \'Doe\' is persisted to the data store", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Getting all Participants from API")]
+        public virtual void GettingAllParticipantsFromAPI()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting all Participants from API", null, ((string[])(null)));
+#line 27
+   this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 28
    testRunner.Given("a participant with ID of 1, first name \'John\', and last name \'Doe\' exists already" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 29
    testRunner.When("calling the get Participant method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 30
    testRunner.Then("the controller should return a list of Participants", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 26
+#line 31
    testRunner.And("the first participant\'s ID is 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

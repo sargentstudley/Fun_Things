@@ -48,6 +48,24 @@ namespace participant.participantapi_tests.unit
         }
 
         [Test]
+        public void InMemoryParticipantStore_ReturnsNullWhenNotFound()
+        {
+            //Setup
+            List<Participant> originalList = new List<Participant>();
+            var participant = new Participant(1, "Bob", "Smith");
+            originalList.Add(participant);
+
+            var nonExistantID = 12345;
+           
+            IRepository<Participant> store = new InMemoryParticipantStore(originalList);
+
+            var result = store.Single(p => p.ID == nonExistantID);
+
+            //Assert Results
+            Assert.That(result, Is.Null);
+        }
+
+        [Test]
         public void InMemoryParticipantStore_canAdd()
         {
             var participantAdded = new Participant(1, "Bob","Smith");
