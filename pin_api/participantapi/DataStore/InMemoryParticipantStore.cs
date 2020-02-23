@@ -2,45 +2,44 @@ namespace participant.participantapi.DataStore
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.Concurrent;
     using System.Linq;
     using System.Linq.Expressions;
     using System.Threading;
 
     public class InMemoryParticipantStore : IRepository<Participant>
     {
-        private List<Participant> participantList;
+        private ConcurrentDictionary<int, Participant> participantList;
         private int index;
         public InMemoryParticipantStore(IEnumerable<Participant> participants = null)
         {
-            if (participants == null) 
+            participantList = new ConcurrentDictionary<int, Participant>();
+            index = 0;
+
+            if (participants != null)
             {
-                participantList = new List<Participant>();
-                index = 0;
-            }
-            else
-            {
-                participantList = participants.ToList();
-                index = participantList.Select(p => p.ID.Value).Max();
+                foreach (var p in participants) Add(p); 
+                index = participantList.Keys.OrderByDescending(k => k).First();
             }
 
-            
+
         }
         public Participant Add(Participant item)
         {
-            if (item.ID.HasValue)
+            if (!item.ID.HasValue)
             {
-                participantList.RemoveAll(p => p.ID == item.ID);
-            }
-            else
-            {
-                item = new Participant(Interlocked.Increment(ref index), 
+                item = new Participant(Interlocked.Increment(ref index),
                                         item.FirstName,
                                         item.LastName
                                     );
-                                    
             }
-            
-            participantList.Add(item);
+
+            participantList.AddOrUpdate(item.ID.Value,
+                                        item,
+                                        (id, existingVal) =>
+                                        {
+                                            return item;
+                                        });
 
             return item;
         }
@@ -48,23 +47,14 @@ namespace participant.participantapi.DataStore
         public IEnumerable<Participant> Add(IEnumerable<Participant> items)
         {
             //Loop through items to be added, assign IDs to those that don't have it. 
-            var participantsToAdd = items.Select(p => p.ID.HasValue ? p 
-                                        : new Participant(Interlocked.Increment(ref index),p.FirstName,p.LastName)).ToList();
-
-            var incomingParticipantIds = participantsToAdd.Select(p => p.ID.Value);
-
-            //Loop through all existing items, remove existing duplicates from local store found in hash set. 
-            participantList.RemoveAll(p => incomingParticipantIds.Contains(p.ID.Value));
-            
-            //Add new items. 
-            participantList.AddRange(participantsToAdd);
+            var participantsToAdd = items.Select(p => Add(p)).ToList();
 
             return participantsToAdd;
         }
 
         public IQueryable<Participant> All()
         {
-            return participantList.AsQueryable();
+            return participantList.Values.AsQueryable();
         }
 
         public IQueryable<Participant> All(int page, int pageSize)
@@ -74,13 +64,22 @@ namespace participant.participantapi.DataStore
 
         public void Delete(Expression<Func<Participant, bool>> expression)
         {
-            var setToRemove = participantList.AsQueryable().Where(expression).ToHashSet();
-            participantList.RemoveAll(p => setToRemove.Contains(p));
+            var setToRemove = participantList.Values.AsQueryable().Where(expression).Select(i => i.ID.Value).ToHashSet();
+
+            Participant particpantRemoved;
+            foreach (var i in setToRemove)
+            {
+                participantList.TryRemove(i, out particpantRemoved);
+            }
         }
 
         public void Delete(Participant item)
         {
-            participantList.Remove(item);
+            Participant particpantRemoved;
+
+            if (!item.ID.HasValue) throw new ArgumentException("Particpant has no ID, can't do lookup to delete");
+
+            participantList.TryRemove(item.ID.Value, out particpantRemoved);
         }
 
         public void DeleteAll()
@@ -95,14 +94,14 @@ namespace participant.participantapi.DataStore
 
         public Participant Single(Expression<Func<Participant, bool>> expression)
         {
-            
-            Func<Participant,bool> func = expression.Compile();
+
+            Func<Participant, bool> func = expression.Compile();
 
             try
             {
-                return participantList.Single(func);
+                return participantList.Values.Single(func);
             }
-            catch(InvalidOperationException)
+            catch (InvalidOperationException)
             {
                 return null;
             }
