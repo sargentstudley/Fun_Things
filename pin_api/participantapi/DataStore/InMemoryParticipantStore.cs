@@ -4,6 +4,7 @@ namespace participant.participantapi.DataStore
     using System.Collections.Generic;
     using System.Linq;
     using System.Linq.Expressions;
+    using System.Threading;
 
     public class InMemoryParticipantStore : IRepository<Participant>
     {
@@ -32,7 +33,7 @@ namespace participant.participantapi.DataStore
             }
             else
             {
-                item = new Participant(++index, 
+                item = new Participant(Interlocked.Increment(ref index), 
                                         item.FirstName,
                                         item.LastName
                                     );
@@ -48,7 +49,7 @@ namespace participant.participantapi.DataStore
         {
             //Loop through items to be added, assign IDs to those that don't have it. 
             var participantsToAdd = items.Select(p => p.ID.HasValue ? p 
-                                        : new Participant(++index,p.FirstName,p.LastName)).ToList();
+                                        : new Participant(Interlocked.Increment(ref index),p.FirstName,p.LastName)).ToList();
 
             var incomingParticipantIds = participantsToAdd.Select(p => p.ID.Value);
 
