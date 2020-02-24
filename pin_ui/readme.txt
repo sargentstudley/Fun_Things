@@ -1,4 +1,4 @@
-Installation
+INSTALLATION
 -Install NPM
   if you're on Windows, you have to install npm for windows.  Use the installer trust me.
   Restart VSCode (so you get the latest path updates), open a terminal (control + tilde)
@@ -8,9 +8,9 @@ Installation
   verify your installation by typing running "vue ui" on the command line
 
 -Add development extensions
-  eslint
-  prettier
-  vetur
+  eslint (dbaeumer.vscode-eslint)
+  prettier (esbenp.prettier-vscode)
+  vetur (octref.vetur)
 
 -Set up VSCode preferences
   settings are secretly a giant built in json file and when you modify them, you create your own personal preferences json file.
@@ -32,3 +32,8 @@ Installation
   To build for production:
     npm run build
   See the generated README.md in the site folder for more commands.
+
+BEST PRACTICES
+-Put components loaded by the vue router into the views directory and reusable components into the components directory.
+  Think of views as pages
+
