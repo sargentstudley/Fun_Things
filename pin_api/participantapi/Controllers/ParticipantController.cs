@@ -1,15 +1,39 @@
 namespace participant.participantapi.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using participantapi.DataStore;
+    using System.Linq;
+    using System.Collections.Generic;
 
     [ApiController]
     [Route("[controller]")]
     public class ParticipantController : ControllerBase
     {
-        [HttpGet("{id}")]
-        public Participant Get(int id)
+        private IRepository<Participant> _datastore;
+        public ParticipantController(IRepository<Participant> datastore)
         {
-            return new Participant(id, "DefaultName");
+            _datastore = datastore;
+        }
+
+        [HttpGet]
+        public ActionResult<Participant[]> Get()
+        {
+            return _datastore.All().ToArray();
+        }
+
+        
+        [HttpGet("{id}")]
+        public ActionResult<Participant> Get(int id)
+        {
+            var result = _datastore.Single(p => p.ID == id);
+            if (result != null) return result;
+            return NotFound();
+        }
+
+        [HttpPut]
+        public ActionResult<IEnumerable<Participant>> Put(Participant[] participants)
+        {
+            return _datastore.Add(participants).ToArray();
         }
     }
 }

@@ -54,8 +54,10 @@ Who is it for?
 * Here are the testing technologies currently used:
   * Dotnet
     * Specflow for BDD tests. Feature files are written using gherkin: https://cucumber.io/docs/gherkin/reference/
-      * Write a feature file, and then create a matching steps file in the steps folder.
-      * Use ```dotnet watch test``` to re-run the test suite when ever you save to disk.
+      * Write a feature file, and then create a matching steps file in the steps folder. 
+      * Use ```dotnet watch test``` to re-run the test suite when ever you save to disk. 
+      * For Coverage reports: ```dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=./lcov.info```
+        * Use vscode plugin ryanluker.vscode-coverage-gutters to view coverage in vscode. 
   * Vue
     * Mocha (Test framework) Chai (Assertion framework) for BDD tests. Files are stored under test/unit.
       * Reference mocha documentation here: https://mochajs.org/

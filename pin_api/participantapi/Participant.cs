@@ -2,30 +2,23 @@ namespace participant.participantapi
 {
     public class Participant 
     {
-        private readonly string name;
-
-        private readonly int id;
-
-        public Participant(int id, string name)
+        public Participant()
         {
-            this.id = id;
-            this.name = name;
+            
+        }
+        public Participant(int? id, string firstName, string lastName)
+        {
+            this.ID = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
         }
         
-        public string Name
-        {
-            get 
-            {
-                return name;
-            }
-        }
+        public string FirstName {get; set;}
+        
 
-        public int ID
-        {
-            get
-            {
-                return id;
-            }
-        }
+        public string LastName {get;set;}
+        
+
+        public int? ID {get;set;}
     }
 }
