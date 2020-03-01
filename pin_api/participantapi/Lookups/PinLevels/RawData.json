@@ -1,0 +1,2078 @@
+{
+  "PinGroups": [
+    {
+      "Class": "Junior",
+      "Local": "Indoor",
+      "BowType": "Barebow/Basic Compound",
+      "Description": "30 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/joad-indoor-achievement-scoring-matrix-250319072309.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 40
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 75
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 30
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 110
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 50
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 145
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 100
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 140
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 185
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 175
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 230
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 220
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 255
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 265
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 250
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 275
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 280
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 270
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Junior",
+      "Local": "Indoor",
+      "BowType": "Olympic Recurve",
+      "Description": "30 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/joad-indoor-achievement-scoring-matrix-250319072309.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 50
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 100
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 30
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 150
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 50
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 60,
+              "Score": 200
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 100
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 150
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 200
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 190
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 250
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 270
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 285
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 280
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 290
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 285
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 60,
+              "Score": 295
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Junior",
+      "Local": "Indoor",
+      "BowType": "Compound**",
+      "Description": "30 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/joad-indoor-achievement-scoring-matrix-250319072309.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 40,
+              "Score": 50
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 40,
+              "Score": 100
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 30
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 40,
+              "Score": 150
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 50
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 9,
+              "TargetSize_cm": 40,
+              "Score": 200
+            },
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 100
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 150
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 200,
+              "Note": "*"
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 240,
+              "Note": "*"
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 260,
+              "Note": "*"
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 285,
+              "Note": "*"
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 290,
+              "Note": "*"
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 295,
+              "Note": "*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Junior",
+      "Local": "Outdoor",
+      "BowType": "Barebow/Basic Compound",
+      "Description": "36 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/joad-outdoor-achievement-scoring-matrix-250319072323.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 15,
+              "TargetSize_cm": 122,
+              "Score": 130
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 20,
+              "TargetSize_cm": 122,
+              "Score": 155
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 122,
+              "Score": 180
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 205
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 215
+            },
+            {
+              "Distance_Meters": 40,
+              "TargetSize_cm": 122,
+              "Score": 215
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 230
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 225
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 245
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 255
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 250
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 275
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 265
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 285
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 275
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 290
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Junior",
+      "Local": "Outdoor",
+      "BowType": "Olympic Recurve",
+      "Description": "36 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/joad-outdoor-achievement-scoring-matrix-250319072323.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 15,
+              "TargetSize_cm": 122,
+              "Score": 155
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 20,
+              "TargetSize_cm": 122,
+              "Score": 180
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 122,
+              "Score": 205
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 230
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 245
+            },
+            {
+              "Distance_Meters": 40,
+              "TargetSize_cm": 122,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 275
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 240
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 240
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 300
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 275
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 275
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 315
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 295
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 290
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 270
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 335
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 315
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 310
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 295
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 340
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 325
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 325
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 305
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 345
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 335
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 335
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Junior",
+      "Local": "Outdoor",
+      "BowType": "Compound**",
+      "Description": "36 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/joad-outdoor-achievement-scoring-matrix-250319072323.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 15,
+              "TargetSize_cm": 80,
+              "Score": 180,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 15,
+              "TargetSize_cm": 122,
+              "Score": 200
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 20,
+              "TargetSize_cm": 80,
+              "Score": 205,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 20,
+              "TargetSize_cm": 122,
+              "Score": 220
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 230,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 122,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 240,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 245,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 260,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 265,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 40,
+              "TargetSize_cm": 80,
+              "Score": 250,
+              "Note": "Full-Size"
+            },
+            {
+              "Distance_Meters": 40,
+              "TargetSize_cm": 122,
+              "Score": 280
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 280,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 285,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 235,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 300
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 300,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 305,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 265,
+              "Note": "6-Ring"
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 315,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 320,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 300,
+              "Note": "6-Ring"
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 340,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 345,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 330,
+              "Note": "6-Ring"
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 345,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 350,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 340,
+              "Note": "6-Ring"
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 25,
+              "TargetSize_cm": 80,
+              "Score": 350,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 355,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 345,
+              "Note": "6-Ring"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Adult",
+      "Local": "Indoor",
+      "BowType": "Barebow/Basic Compound",
+      "Description": "30 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/indoor-adult-achievement-scoring-matrix-250319071253.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 70
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 100
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 120
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 150
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 175
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 200
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 225
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 250
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 270
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Adult",
+      "Local": "Indoor",
+      "BowType": "Olympic Recurve",
+      "Description": "30 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/indoor-adult-achievement-scoring-matrix-250319071253.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 90
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 140
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 190
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 210
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 230
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 250
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 265
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 270
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 285
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 290
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 295
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Adult",
+      "Local": "Indoor",
+      "BowType": "Compound**",
+      "Description": "30 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/indoor-adult-achievement-scoring-matrix-250319071253.pdf",
+      "Notes": "*",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 125
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 150
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 175
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 200
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 220
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 270
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 280
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 285
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 18,
+              "TargetSize_cm": 40,
+              "Score": 290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Adult",
+      "Local": "Outdoor",
+      "BowType": "Barebow/Basic Compound",
+      "Description": "36 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/outdoor-adult-achievement-scoring-matrix-250319071309.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 160
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 170
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 180
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 190
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 200
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 230
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 200
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 245
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 210
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 255
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 220
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 270
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 230
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 280
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 240
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 285
+            },
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Adult",
+      "Local": "Outdoor",
+      "BowType": "Olympic Recurve",
+      "Description": "36 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/outdoor-adult-achievement-scoring-matrix-250319071309.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 185
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 235
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 122,
+              "Score": 260
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 270
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 280
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 280
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 280
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 290
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 290
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 300
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 300
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 310
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 310
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 315
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 315
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 60,
+              "TargetSize_cm": 122,
+              "Score": 320
+            },
+            {
+              "Distance_Meters": 70,
+              "TargetSize_cm": 122,
+              "Score": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Class": "Adult",
+      "Local": "Outdoor",
+      "BowType": "Compound**",
+      "Description": "36 Arrow Round",
+      "Summary": "If an award level has more than one distance or target size, the club leader will choose where to have the archer positioned and what target face he or she will use based on skill level/experience of that archer. At the Bronze, Silver and Gold pin levels archers are required to shoot in their age class.",
+      "SourceData": "https://www.usarchery.org/resources/outdoor-adult-achievement-scoring-matrix-250319071309.pdf",
+      "Pins": [
+        {
+          "PinLevel": 1,
+          "PinName": "One Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 200,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 215,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 2,
+          "PinName": "Two Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 225,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 240,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 3,
+          "PinName": "Three Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 250,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 30,
+              "TargetSize_cm": 80,
+              "Score": 265,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 4,
+          "PinName": "Four Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 270,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 280,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 5,
+          "PinName": "Five Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 280,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 290,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 6,
+          "PinName": "Six Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 295,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 300,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 7,
+          "PinName": "Seven Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 310,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 315,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 8,
+          "PinName": "Eight Star",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 320,
+              "Note": "6-Ring"
+            },
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 80,
+              "Score": 325,
+              "Note": "Full-Size"
+            }
+          ]
+        },
+        {
+          "PinLevel": 9,
+          "PinName": "Bronze",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 335,
+              "Note": "6-Ring"
+            }
+          ]
+        },
+        {
+          "PinLevel": 10,
+          "PinName": "Silver",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 345,
+              "Note": "6-Ring"
+            }
+          ]
+        },
+        {
+          "PinLevel": 11,
+          "PinName": "Gold",
+          "ScoreOptions": [
+            {
+              "Distance_Meters": 50,
+              "TargetSize_cm": 122,
+              "Score": 350,
+              "Note": "6-Ring"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    {
+      "Name": "*",
+      "Description": "Indicates that points are earned using Inner 10 ring scoring"
+    },
+    {
+      "Name": "**",
+      "Description": "Collegiate archers in the Bowhunter division should use Outer 10-Ring scoring"
+    }
+  ]
+}
