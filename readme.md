@@ -11,11 +11,18 @@ Who is it for?
 ## Dependencies
 
 * Dotnet SDK (3.1.1)
+<<<<<<< HEAD
+* Install-Module -Name Pester -Force -SkipPublisherCheck
+* Install-Module -Name sqlserver
+* Install-Module dbatools
+
+=======
 * Docker
 * Node 13.8
 * Vue CLI 3
 
 ### Local Setup
+>>>>>>> master
 
 1. Install [Git](https://www.atlassian.com/git/tutorials/install-git)
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/)
