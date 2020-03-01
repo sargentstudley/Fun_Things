@@ -1,6 +1,7 @@
 # Based on https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html
 # build stage
 FROM node:13.8.0 as build-stage
+ENV NODE_ENV development
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
