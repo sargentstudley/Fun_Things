@@ -30,7 +30,7 @@ export default {
       // Request currently doesn't work because CORS violation (in this case 192.168.99.100 is my docker host). 
       // This is where Ngnix might come in very handy. 
       // Also, check Axios - seems a common framework for Vue and API interaction.
-      const myRequest = new Request('http://192.168.99.100:9090/participant/');
+      const myRequest = new Request('http://192.168.99.100/api/participant/');
       fetch(myRequest)
         .then((response) => {return response.json()})
         .then((data) => {
