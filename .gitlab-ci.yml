@@ -42,6 +42,8 @@ build pin_ui:
   stage: build
   image: node:13.8.0
   artifacts:
+  variables:
+    NODE_ENV: development
   script:
     - "cd pin_ui/pinmentor"
     - "npm install"
