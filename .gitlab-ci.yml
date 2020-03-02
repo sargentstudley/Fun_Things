@@ -1,18 +1,43 @@
 stages:
   - build
   - test
+  - buildDockerImage
 
-# Shooter API pipeline items:
+# Participant API pipeline items:
+build participant_api:
+  stage: build
+  image: mcr.microsoft.com/dotnet/core/sdk:3.1
+  script:
+    - "cd pin_api/participantapi"
+    - "dotnet build"
 
-test pin_api:
+test participant_api:
   stage: test
   image: mcr.microsoft.com/dotnet/core/sdk:3.1
   script:
     - "cd pin_api/participantapi_tests"
     - "dotnet test"
 
-# pin_ui pipeline items:
+docker build participant_api:
+  image: docker:19.03.1
+  stage: buildDockerImage
+  only:
+    - master
+  services:
+    - docker:19.03.1-dind
+  variables:
+    IMAGE_NAME: "$CI_REGISTRY_IMAGE/participantapi"
+    MAJOR_VERSION: 0
+    MINOR_VERSION: 0
+    PATCH_VERSION: 1
+    DOCKERFILE_PATH: ./pin_api/participantapi
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - IMAGE_TAG="$IMAGE_NAME:$MAJOR_VERSION.$MINOR_VERSION.$PATCH_VERSION.$CI_PIPELINE_IID"
+    - docker build -t $IMAGE_TAG $DOCKERFILE_PATH --no-cache
+    - docker push $IMAGE_TAG
 
+# pin_ui pipeline items:
 build pin_ui:
   stage: build
   image: node:13.8.0
@@ -32,3 +57,22 @@ test pin_ui:
     - "npm install"
     - "npm install -g @vue/cli"
     - "npm run test:unit"
+
+docker build pin_ui:
+  image: docker:19.03.1
+  stage: buildDockerImage
+  only:
+    - master
+  services:
+    - docker:19.03.1-dind
+  variables:
+    IMAGE_NAME: "$CI_REGISTRY_IMAGE/pinmentor"
+    MAJOR_VERSION: 0
+    MINOR_VERSION: 0
+    PATCH_VERSION: 1
+    DOCKERFILE_PATH: ./pin_ui/pinmentor
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - IMAGE_TAG="$IMAGE_NAME:$MAJOR_VERSION.$MINOR_VERSION.$PATCH_VERSION.$CI_PIPELINE_IID"
+    - docker build -t $IMAGE_TAG $DOCKERFILE_PATH --no-cache
+    - docker push $IMAGE_TAG
