@@ -5,44 +5,39 @@
     import individual participantt components, then they can be added just like
     an HTML tag here!
     <ul>
-      <Participant firstName="John" lastName="Doe"/>
+      <li v-for="p in participants" :key="p.id">
+        <Participant :firstName="p.firstName" :lastName="p.lastName" />
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 import Participant from '../components/Participant';
+import axios from 'axios';
 
 export default {
   name: 'ParticipantList',
   data: () => {
     return {
       participants: []
-    }
+    };
   },
   components: {
-    Participant,
+    Participant
   },
-  methods: {
-    fetchData: () => {
-      let self = this;
-      // This needs to be replaced with an ENV variable that gets injected on-build, or something equivilent.
-      // Request currently doesn't work because CORS violation (in this case 192.168.99.100 is my docker host). 
-      // This is where Ngnix might come in very handy. 
-      // Also, check Axios - seems a common framework for Vue and API interaction.
-      const myRequest = new Request('http://192.168.99.100/api/participant/');
-      fetch(myRequest)
-        .then((response) => {return response.json()})
-        .then((data) => {
-          self.participants = data;
-        }).catch(error => { console.log(error); });
-    }
-  },
-  mounted() {
-    this.fetchData();
+  created() {
+    axios
+      .get('http://192.168.99.100/api/participant/')
+      .then(response => {
+        this.participants = response.data;
+        console.log('Fetched participants OK');
+      })
+      .catch(e => {
+        console.log('Error fetching participants: ' + e);
+      });
   }
 };
 </script>
 
 <style scoped></style>
-
